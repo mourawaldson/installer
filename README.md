@@ -2,7 +2,7 @@
 Install apps and configs
 ## Git free install
 ```bash
-cd /Desktop; curl -sL https://github.com/mourawaldson/installer/tarball/master | tar -xzv --strip-components 1 --exclude=README.md
+cd /Desktop; curl -sL https://github.com/mourawaldson/installer/tarball/master | tar -xzv --strip-components 1 && bash installer --exclude=README.md
 ```
 
 ## App Store
