@@ -19,6 +19,7 @@ cd /Desktop; curl -sL https://github.com/mourawaldson/installer/tarball/master |
 [CCleaner](https://download.piriform.com/mac/CCMacSetup109.dmg)  
 [DiffMerge](http://download-us.sourcegear.com/DiffMerge/4.2.0/DiffMerge.4.2.0.697.intel.stable.dmg)  
 [Dropbox](https://www.dropbox.com/download?full=1&plat=mac)  
+[ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/ExifTool-9.90.dmg)  
 [Git](http://iweb.dl.sourceforge.net/project/git-osx-installer/git-2.2.1-intel-universal-mavericks.dmg)  
 [GitHub](https://central.github.com/mac/latest)  
 [GitX](http://builds.phere.net/GitX/development/GitX-dev.dmg)  
