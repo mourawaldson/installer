@@ -90,9 +90,37 @@ sudo apachectl restart
 # Apps                                                                        #
 ###############################################################################
 
-# Git
+# Define and create to-install dir
+TOINSTALLDIR=/Users/mourawaldson/to-install
+mkdir $TOINSTALLDIR
 
-# MySQL
+# Atom
+# Need to separate header and build a curl post
+#curl -o atom https://atom.io/download/mac && url=$(grep -o "http.*\%3D" atom) && download=$(echo curl -o $url) && eval $download
+
+# CCleaner
+curl -k -o ccleaner.dmg https://download.piriform.com/mac/CCMacSetup109.dmg && hdiutil attach ccleaner.dmg && cp -R /Volumes/CCleaner/CCleaner.app /Applications/ && hdiutil detach /Volumes/CCleaner && rm CCMacSetup109.dmg
+
+# Composer
+curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
+
+# DiffMerge
+curl -o DiffMerge.dmg http://download-us.sourcegear.com/DiffMerge/4.2.0/DiffMerge.4.2.0.697.intel.stable.dmg && hdiutil attach DiffMerge.dmg && cp -R /Volumes/DiffMerge\ 4.2.0.697\ intel\ stable/DiffMerge.app /Applications/ && hdiutil detach /Volumes/DiffMerge\ 4.2.0.697\ intel\ stable && rm DiffMerge.dmg
+
+# Dropbox
+curl -o Dropbox.dmg https://d1ilhw0800yew8.cloudfront.net/client/Dropbox%203.2.9.dmg && hdiutil attach Dropbox.dmg && open /Volumes/Dropbox\ Installer/Dropbox.app
+
+# ExifTool
+curl -o $TOINSTALLDIR/ExifTool.dmg http://www.sno.phy.queensu.ca/~phil/exiftool/ExifTool-9.90.dmg
+
+# Git
+curl -o $TOINSTALLDIR/Git.dmg http://iweb.dl.sourceforge.net/project/git-osx-installer/git-2.2.1-intel-universal-mavericks.dmg
+
+# GitHub
+curl -o GitHub.zip https://d4hwcs1zqtwzs.cloudfront.net/mac/GitHub%20for%20Mac%20204.zip && unzip GitHub.zip && sudo mv GitHub.app /Applications/GitHub.app && sudo rm GitHub.zip
+
+# GitX
+curl -O http://builds.phere.net/GitX/development/GitX-dev.dmg && hdiutil attach GitX-dev.dmg && cp -R /Volumes/GitX\ 1964/GitX.app /Applications/ && hdiutil detach /Volumes/GitX\ 1964 && rm GitX-dev.dmg
 
 # Google Chrome
 curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg && hdiutil attach googlechrome.dmg && cp /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/ && hdiutil detach /Volumes/Google\ Chrome && rm googlechrome.dmg
@@ -100,36 +128,26 @@ curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg && hdiutil
 # Google Drive
 curl -O https://dl.google.com/drive/installgoogledrive.dmg && hdiutil attach installgoogledrive.dmg && cp /Volumes/Install\ Google\ Drive/Google\ Drive.app /Applications/ && hdiutil detach /Volues/Install\ Google\ Drive && rm installgoogledrive.dmg
 
-# CCleaner
-curl -k -o ccleaner.dmg https://download.piriform.com/mac/CCMacSetup109.dmg && hdiutil attach ccleaner.dmg && cp -R /Volumes/CCleaner/CCleaner.app /Applications/ && hdiutil detach /Volumes/CCleaner && rm CCMacSetup109.dmg
+# MacKeeper
+curl -o $TOINSTALLDIR/MacKeeper.pkg http://download.mackeeper.com/package.php?bundleId=29_2
+
+# MySQL
+curl -o $TOINSTALLDIR/MySQL.dmg http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.23-osx10.9-x86_64.dmg
+
+#PhoneExpander
+curl -o PhoneExpander.zip http://phoneexpander.com/beta/PhoneExpander-public-beta2.zip && unzip PhoneExpander.zip && sudo mv PhoneExpander.app /Applications/PhoneExpander.app && sudo rm PhoneExpander.zip
+
+# Sequel Pro
+curl -O https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg && hdiutil attach sequel-pro-1.0.2.dmg && cp -R /Volumes/Sequel\ Pro\ 1.0.2/Sequel\ Pro.app /Applications/ && hdiutil detach /Volumes/Sequel\ Pro\ 1.0.2 && rm sequel-pro-1.0.2.dmg && cp ~/Dropbox/Softwares/Sequel\ Pro/Data/Favorites.plist ~/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist
+
+# Skype
+curl -O http://download.skype.com/macosx/c868eb3553d80de6e967b8a258e58009/Skype_7.6.409.dmg && hdiutil attach Skype_7.6.409.dmg && cp -R /Volumes/Skype/Skype.app /Applications/ && hdiutil detach /Volumes/Skype && rm Skype_7.6.409.dmg
 
 # Transmission
 curl -O https://transmission.cachefly.net/Transmission-2.84.dmg && hdiutil attach Transmission-2.84.dmg && cp -R /Volumes/Transmission/Transmission.app /Applications/ && hdiutil detach /Volumes/Transmission && rm Transmission-2.84.dmg
 
 # VLC
 curl -O http://mirror.csclub.uwaterloo.ca/vlc/vlc/2.2.0/macosx/vlc-2.2.0.dmg && hdiutil attach vlc-2.2.0.dmg && cp -R /Volumes/vlc-2.2.0/VLC.app /Applications/ && hdiutil detach /Volumes/vlc-2.2.0 && rm vlc-2.2.0.dmg
-
-# DiffMerge
-curl -o DiffMerge.dmg http://download-us.sourcegear.com/DiffMerge/4.2.0/DiffMerge.4.2.0.697.intel.stable.dmg && hdiutil attach DiffMerge.dmg && cp -R /Volumes/DiffMerge\ 4.2.0.697\ intel\ stable/DiffMerge.app /Applications/ && hdiutil detach /Volumes/DiffMerge\ 4.2.0.697\ intel\ stable && rm DiffMerge.dmg
-
-# Atom
-# Need to separate header and build a curl post
-#curl -o atom https://atom.io/download/mac && url=$(grep -o "http.*\%3D" atom) && download=$(echo curl -o $url) && eval $download
-
-# MacKeeper
-curl -o MacKeeper.2.17.1.pkg http://download.mackeeper.com/package.php?bundleId=29_2 && open MacKeeper.2.17.1.pkg
-
-# Dropbox
-#https://www.dropbox.com/download?full=1&plat=mac
-
-# GitHub
-#https://central.github.com/mac/latest
-
-# GitX
-curl -O http://builds.phere.net/GitX/development/GitX-dev.dmg && hdiutil attach GitX-dev.dmg && cp -R /Volumes/GitX\ 1964/GitX.app /Applications/ && hdiutil detach /Volumes/GitX\ 1964 && rm GitX-dev.dmg
-
-# Sequel Pro
-curl -O https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg && hdiutil attach sequel-pro-1.0.2.dmg && cp -R /Volumes/Sequel\ Pro\ 1.0.2/Sequel\ Pro.app /Applications/ && hdiutil detach /Volumes/Sequel\ Pro\ 1.0.2 && rm sequel-pro-1.0.2.dmg && cp ~/Dropbox/Softwares/Sequel\ Pro/Data/Favorites.plist ~/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist
 
 ###############################################################################
 # Misc                                                                        #
