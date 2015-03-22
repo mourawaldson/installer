@@ -26,7 +26,7 @@ cd /Desktop; curl -sL https://github.com/mourawaldson/installer/tarball/master |
 [Google Chrome](https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg)  
 [Google Drive](https://dl.google.com/drive/installgoogledrive.dmg)  
 [MacKeeper](http://download.mackeeper.com/package.php?bundleId=29_2)   
-[MySQL](http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.23-osx10.9-x86_64.tar.gz)  
+[MySQL](http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.23-osx10.9-x86_64.dmg)  
 [PhoneExpander](http://phoneexpander.com/beta/PhoneExpander-public-beta2.zip)  
 [Sequel Pro](https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg)  
 [Skype](http://download.skype.com/macosx/36ef3be64252e5a4a2db5ba4aa6c0df3/Skype_7.5.738.dmg)  
