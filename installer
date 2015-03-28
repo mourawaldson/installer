@@ -10,8 +10,9 @@ sudo -v
 # Install PHP 5.6
 curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
 
+user=mourawaldson
 ini=/usr/local/php5/php.d/99-liip-developer.ini
-github=https://github.com/mourawaldson
+github=https://github.com/$user
 
 # Backup ini
 sudo cp $ini $ini-bkp
@@ -34,7 +35,7 @@ done
 ###############################################################################
 
 # Define and create Sites dirw
-SITESDIR=/Users/mourawaldson/Sites
+SITESDIR=/Users/$user/Sites
 mkdir $SITESDIR
 
 # Create info.php
@@ -43,16 +44,16 @@ phpinfo();"
 echo "$PHPINFO" > $SITESDIR/info.php
 
 # Create user conf
-MOURAWALDSONCONF="<Directory "$SITESDIR">
+USERCONF="<Directory "$SITESDIR">
     Options Indexes FollowSymLinks MultiViews
     AllowOverride None
     Order allow,deny
     Allow from all
 </Directory>"
-echo "$MOURAWALDSONCONF" > /etc/apache2/users/mourawaldson.conf
+echo "$USERCONF" > /etc/apache2/users/$user.conf
 
 # Make sure about user conf permission
-sudo chmod 644 /etc/apache2/users/mourawaldson.conf
+sudo chmod 644 /etc/apache2/users/$user.conf
 
 # Enable user conf
 sudo sed -i '' 's/#Include\ \/private\/etc\/apache2\/extra\/httpd-userdir.conf/Include\ \/private\/etc\/apache2\/extra\/httpd-userdir.conf/g' /etc/apache2/httpd.conf
@@ -91,7 +92,7 @@ sudo apachectl restart
 ###############################################################################
 
 # Define and create to-install dir
-TOINSTALLDIR=/Users/mourawaldson/to-install
+TOINSTALLDIR=/Users/$user/to-install
 mkdir $TOINSTALLDIR
 
 # Atom
