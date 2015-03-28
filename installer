@@ -134,6 +134,28 @@ curl -o $TOINSTALLDIR/MacKeeper.pkg http://download.mackeeper.com/package.php?bu
 # MySQL
 curl -o $TOINSTALLDIR/MySQL.dmg http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.23-osx10.9-x86_64.dmg
 
+# AutoStarting MySQL on Reboot
+MYSQLAUTOSTART="<!--?xml version="1.0" encoding="UTF-8"?-->
+<plist version="1.0">
+  <dict>
+    <key>KeepAlive</key>
+    <true />
+    <key>Label</key>
+    <string>com.mysql.mysqld</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/local/mysql/bin/mysqld_safe</string>
+      <string>--user=mysql</string>
+    </array>
+  </dict>
+</plist>"
+echo "$MYSQLAUTOSTART" > /Library/LaunchDaemons/com.mysql.mysql.plist
+
+sudo chown root:wheel /Library/LaunchDaemons/com.mysql.mysql.plist
+sudo chmod 644 /Library/LaunchDaemons/com.mysql.mysql.plist
+sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysql.plist
+
+
 #PhoneExpander
 curl -o PhoneExpander.zip http://phoneexpander.com/beta/PhoneExpander-public-beta2.zip && unzip PhoneExpander.zip && sudo mv PhoneExpander.app /Applications/PhoneExpander.app && sudo rm PhoneExpander.zip
 
