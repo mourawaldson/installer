@@ -16,6 +16,7 @@ cd; curl -sL https://github.com/mourawaldson/installer/tarball/master | tar -xzv
 8. Install Office (DVD)
 9. Install applications from App Store
 10. Install workflows ``` curl -sL https://github.com/mourawaldson/workflows/tarball/master | tar -xzv --strip-components 1 && open New\ Text\ File.workflow ```
+11. Sequel Favorites - ``` cp ~/Dropbox/Softwares/Sequel\ Pro/Data/Favorites.plist ~/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist ```
 
 ---
 ## App Store
