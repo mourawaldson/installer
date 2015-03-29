@@ -27,7 +27,7 @@ sudo sed -i '' '16 s/^/; /g' $ini
 for i in {54..79}
 do
   command="sudo sed -i '' '$i s/; //g' $ini"
-  eval="$command"
+  eval $command
 done
 
 ###############################################################################
