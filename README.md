@@ -17,6 +17,7 @@ cd; curl -sL https://github.com/mourawaldson/installer/tarball/master | tar -xzv
 9. Install applications from App Store
 10. Install workflows ``` curl -sL https://github.com/mourawaldson/workflows/tarball/master | tar -xzv --strip-components 1 && open New\ Text\ File.workflow ```
 11. Sequel Favorites - ``` cp ~/Dropbox/Softwares/Sequel\ Pro/Data/Favorites.plist ~/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist ```
+12. Install xcode command line ``` xcode-select --install ```
 
 ---
 ## App Store
