@@ -165,7 +165,7 @@ sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysql.plist
 curl -o PhoneExpander.zip http://phoneexpander.com/beta/PhoneExpander-public-beta3.zip && unzip PhoneExpander.zip && sudo mv PhoneExpander.app /Applications/PhoneExpander.app && sudo rm PhoneExpander.zip
 
 # Sequel Pro
-curl -O https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg && hdiutil attach sequel-pro-1.0.2.dmg && cp -R /Volumes/Sequel\ Pro\ 1.0.2/Sequel\ Pro.app /Applications/ && hdiutil detach /Volumes/Sequel\ Pro\ 1.0.2 && rm sequel-pro-1.0.2.dmg && cp ~/Dropbox/Softwares/Sequel\ Pro/Data/Favorites.plist ~/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist && rm sequel-pro-1.0.2.dmg
+curl -O https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg && hdiutil attach sequel-pro-1.0.2.dmg && cp -R /Volumes/Sequel\ Pro\ 1.0.2/Sequel\ Pro.app /Applications/ && hdiutil detach /Volumes/Sequel\ Pro\ 1.0.2 && rm sequel-pro-1.0.2.dmg && rm sequel-pro-1.0.2.dmg
 
 # Skype
 curl -O http://download.skype.com/macosx/c868eb3553d80de6e967b8a258e58009/Skype_7.6.409.dmg && hdiutil attach Skype_7.6.409.dmg && cp -R /Volumes/Skype/Skype.app /Applications/ && hdiutil detach /Volumes/Skype && rm Skype_7.6.409.dmg
