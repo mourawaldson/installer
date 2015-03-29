@@ -139,6 +139,9 @@ curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg && hdiutil
 # Google Drive
 curl -O https://dl.google.com/drive/installgoogledrive.dmg && hdiutil attach installgoogledrive.dmg && cp -R /Volumes/Install\ Google\ Drive/Google\ Drive.app /Applications/ && hdiutil detach /Volumes/Install\ Google\ Drive && rm installgoogledrive.dmg
 
+# Java
+curl -o $TOINSTALLDIR/Java.dmg "http://sdlc-esd.sun.com/ESD6/JSCDL/jdk/8u40-b27/jre-8u40-macosx-x64.dmg?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u40-b27/jre-8u40-macosx-x64.dmg&BHost=javadl.sun.com&File=jre-8u40-macosx-x64.dmg&AuthParam=1427647083_3d7ccc34c24dee4540c0a78972aeffcd&ext=.dmg"
+
 # MacKeeper
 curl -o $TOINSTALLDIR/MacKeeper.pkg http://download.mackeeper.com/package.php?bundleId=29_2
 
