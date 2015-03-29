@@ -3,6 +3,9 @@
 # Ask for the administrator password upfront
 sudo -v
 
+# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 ###############################################################################
 # PHP                                                                         #
 ###############################################################################
@@ -96,7 +99,7 @@ sudo apachectl restart
 
 # Create bin usr local folder
 BINFOLDER=/usr/local/bin
-sudo mkdir $BINFILDER
+sudo mkdir $BINFOLDER
 
 # Define and create to-install dir
 TOINSTALLDIR=/Users/$user/to-install
@@ -168,7 +171,7 @@ sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysql.plist
 curl -o PhoneExpander.zip http://phoneexpander.com/beta/PhoneExpander-public-beta3.zip && unzip PhoneExpander.zip && sudo mv PhoneExpander.app /Applications/PhoneExpander.app && sudo rm PhoneExpander.zip
 
 # Sequel Pro
-curl -O https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg && hdiutil attach sequel-pro-1.0.2.dmg && cp -R /Volumes/Sequel\ Pro\ 1.0.2/Sequel\ Pro.app /Applications/ && hdiutil detach /Volumes/Sequel\ Pro\ 1.0.2 && rm sequel-pro-1.0.2.dmg && rm sequel-pro-1.0.2.dmg
+curl -O https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg && hdiutil attach sequel-pro-1.0.2.dmg && cp -R /Volumes/Sequel\ Pro\ 1.0.2/Sequel\ Pro.app /Applications/ && hdiutil detach /Volumes/Sequel\ Pro\ 1.0.2 && rm sequel-pro-1.0.2.dmg
 
 # Skype
 curl -O http://download.skype.com/macosx/c868eb3553d80de6e967b8a258e58009/Skype_7.6.409.dmg && hdiutil attach Skype_7.6.409.dmg && cp -R /Volumes/Skype/Skype.app /Applications/ && hdiutil detach /Volumes/Skype && rm Skype_7.6.409.dmg
@@ -189,4 +192,4 @@ cd .dotfiles
 curl -sL $github/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude=readme.md && bash install && cd;
 
 # Install .osx
-bash .dotfiles/.osx
+sudo bash .dotfiles/.osx
