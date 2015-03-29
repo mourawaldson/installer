@@ -50,7 +50,7 @@ USERCONF="<Directory "$SITESDIR">
     Order allow,deny
     Allow from all
 </Directory>"
-echo "$USERCONF" > /etc/apache2/users/$user.conf
+sudo echo "$USERCONF" > /etc/apache2/users/$user.conf
 
 # Make sure about user conf permission
 sudo chmod 644 /etc/apache2/users/$user.conf
