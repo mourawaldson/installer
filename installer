@@ -180,9 +180,6 @@ curl -O http://mirror.csclub.uwaterloo.ca/vlc/vlc/2.2.0/macosx/vlc-2.2.0.dmg && 
 # Misc                                                                        #
 ###############################################################################
 
-# Install command line
-xcode-select --install
-
 # Install .dotfiles
 cd $HOME;
 curl -sL $github/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude=readme.md && bash .dotfiles/install
