@@ -100,7 +100,7 @@ mkdir $TOINSTALLDIR
 #curl -o atom https://atom.io/download/mac && url=$(grep -o "http.*\%3D" atom) && download=$(echo curl -o $url) && eval $download
 
 # CCleaner
-curl -k -o ccleaner.dmg https://download.piriform.com/mac/CCMacSetup109.dmg && hdiutil attach ccleaner.dmg && cp -R /Volumes/CCleaner/CCleaner.app /Applications/ && hdiutil detach /Volumes/CCleaner && rm CCMacSetup109.dmg
+curl -k -o ccleaner.dmg https://download.piriform.com/mac/CCMacSetup109.dmg && hdiutil attach ccleaner.dmg && cp -R /Volumes/CCleaner/CCleaner.app /Applications/ && hdiutil detach /Volumes/CCleaner && rm ccleaner.dmg
 
 # Composer
 curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
