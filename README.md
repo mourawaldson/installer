@@ -3,7 +3,7 @@ Install apps and configs
 ## Instructions
 ### To install execute:
 ```bash
-cd; curl -sL https://github.com/mourawaldson/installer/tarball/master | tar -xzv --strip-components 1 --exclude=README.md --exclude=LICENSE && bash installer
+cd; curl -sL https://github.com/mourawaldson/installer/tarball/master | tar -xzv --strip-components 1 --exclude=README.md --exclude=LICENSE && sudo bash installer
 ```
 ### After install
 1. [Generate SSH key](https://help.github.com/articles/generating-ssh-keys)
