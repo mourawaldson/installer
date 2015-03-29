@@ -96,7 +96,7 @@ sudo apachectl restart
 
 # Create bin usr local folder
 BINFOLDER=/usr/local/bin
-mkdir $BINFILDER
+sudo mkdir $BINFILDER
 
 # Define and create to-install dir
 TOINSTALLDIR=/Users/$user/to-install
@@ -134,7 +134,7 @@ curl -O http://builds.phere.net/GitX/development/GitX-dev.dmg && hdiutil attach 
 curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg && hdiutil attach googlechrome.dmg && cp -R /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/ && hdiutil detach /Volumes/Google\ Chrome && rm googlechrome.dmg
 
 # Google Drive
-curl -O https://dl.google.com/drive/installgoogledrive.dmg && hdiutil attach installgoogledrive.dmg && cp -R /Volumes/Install\ Google\ Drive/Google\ Drive.app /Applications/ && hdiutil detach /Volues/Install\ Google\ Drive && rm installgoogledrive.dmg
+curl -O https://dl.google.com/drive/installgoogledrive.dmg && hdiutil attach installgoogledrive.dmg && cp -R /Volumes/Install\ Google\ Drive/Google\ Drive.app /Applications/ && hdiutil detach /Volumes/Install\ Google\ Drive && rm installgoogledrive.dmg
 
 # MacKeeper
 curl -o $TOINSTALLDIR/MacKeeper.pkg http://download.mackeeper.com/package.php?bundleId=29_2
