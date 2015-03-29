@@ -44,11 +44,10 @@ phpinfo();"
 echo "$PHPINFO" > $SITESDIR/info.php
 
 # Create user conf
-USERCONF="<Directory "$SITESDIR">
-    Options Indexes FollowSymLinks MultiViews
-    AllowOverride None
-    Order allow,deny
-    Allow from all
+USERCONF="<Directory \"$SITESDIR\">
+    AllowOverride All
+    Options Indexes MultiViews FollowSymLinks
+    Require all granted
 </Directory>"
 sudo echo "$USERCONF" > /etc/apache2/users/$user.conf
 
