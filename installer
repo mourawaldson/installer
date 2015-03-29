@@ -91,6 +91,10 @@ sudo apachectl restart
 # Apps                                                                        #
 ###############################################################################
 
+# Create bin usr local folder
+BINFOLDER=/usr/local/bin
+mkdir $BINFILDER
+
 # Define and create to-install dir
 TOINSTALLDIR=/Users/$user/to-install
 mkdir $TOINSTALLDIR
