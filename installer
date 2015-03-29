@@ -124,10 +124,10 @@ curl -o GitHub.zip https://d4hwcs1zqtwzs.cloudfront.net/mac/GitHub%20for%20Mac%2
 curl -O http://builds.phere.net/GitX/development/GitX-dev.dmg && hdiutil attach GitX-dev.dmg && cp -R /Volumes/GitX\ 1964/GitX.app /Applications/ && hdiutil detach /Volumes/GitX\ 1964 && rm GitX-dev.dmg
 
 # Google Chrome
-curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg && hdiutil attach googlechrome.dmg && cp /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/ && hdiutil detach /Volumes/Google\ Chrome && rm googlechrome.dmg
+curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg && hdiutil attach googlechrome.dmg && cp -R /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/ && hdiutil detach /Volumes/Google\ Chrome && rm googlechrome.dmg
 
 # Google Drive
-curl -O https://dl.google.com/drive/installgoogledrive.dmg && hdiutil attach installgoogledrive.dmg && cp /Volumes/Install\ Google\ Drive/Google\ Drive.app /Applications/ && hdiutil detach /Volues/Install\ Google\ Drive && rm installgoogledrive.dmg
+curl -O https://dl.google.com/drive/installgoogledrive.dmg && hdiutil attach installgoogledrive.dmg && cp -R /Volumes/Install\ Google\ Drive/Google\ Drive.app /Applications/ && hdiutil detach /Volues/Install\ Google\ Drive && rm installgoogledrive.dmg
 
 # MacKeeper
 curl -o $TOINSTALLDIR/MacKeeper.pkg http://download.mackeeper.com/package.php?bundleId=29_2
