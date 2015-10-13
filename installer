@@ -110,7 +110,7 @@ mkdir $TOINSTALLDIR
 #curl -o atom https://atom.io/download/mac && url=$(grep -o "http.*\%3D" atom) && download=$(echo curl -o $url) && eval $download
 
 # CCleaner
-curl -k -o ccleaner.dmg https://download.piriform.com/mac/CCMacSetup109.dmg && hdiutil attach ccleaner.dmg && cp -R /Volumes/CCleaner/CCleaner.app /Applications/ && hdiutil detach /Volumes/CCleaner && rm ccleaner.dmg
+curl -k -o ccleaner.dmg https://download.piriform.com/mac/CCMacSetup110.dmg && hdiutil attach ccleaner.dmg && cp -R /Volumes/CCleaner/CCleaner.app /Applications/ && hdiutil detach /Volumes/CCleaner && rm ccleaner.dmg
 
 # Composer
 curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer
@@ -119,16 +119,16 @@ curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/l
 curl -o DiffMerge.dmg http://download-us.sourcegear.com/DiffMerge/4.2.0/DiffMerge.4.2.0.697.intel.stable.dmg && hdiutil attach DiffMerge.dmg && cp -R /Volumes/DiffMerge\ 4.2.0.697\ intel\ stable/DiffMerge.app /Applications/ && hdiutil detach /Volumes/DiffMerge\ 4.2.0.697\ intel\ stable && rm DiffMerge.dmg
 
 # Dropbox
-curl -o Dropbox.dmg https://d1ilhw0800yew8.cloudfront.net/client/Dropbox%203.2.9.dmg && hdiutil attach Dropbox.dmg && open /Volumes/Dropbox\ Installer/Dropbox.app && rm Dropbox.dmg
+curl -o Dropbox.dmg https://clientupdates.dropboxstatic.com/client/Dropbox%203.10.7.dmg && hdiutil attach Dropbox.dmg && open /Volumes/Dropbox\ Installer/Dropbox.app && rm Dropbox.dmg
 
 # ExifTool
-curl -o $TOINSTALLDIR/ExifTool.dmg http://www.sno.phy.queensu.ca/~phil/exiftool/ExifTool-9.90.dmg
+curl -o $TOINSTALLDIR/ExifTool.dmg http://www.sno.phy.queensu.ca/~phil/exiftool/ExifTool-10.02.dmg
 
 # Git
-curl -o $TOINSTALLDIR/Git.dmg http://iweb.dl.sourceforge.net/project/git-osx-installer/git-2.2.1-intel-universal-mavericks.dmg
+curl -o $TOINSTALLDIR/Git.dmg http://iweb.dl.sourceforge.net/project/git-osx-installer/git-2.5.3-intel-universal-mavericks.dmg
 
 # GitHub
-curl -o GitHub.zip https://d4hwcs1zqtwzs.cloudfront.net/mac/GitHub%20for%20Mac%20204.zip && unzip GitHub.zip && sudo mv GitHub.app /Applications/GitHub.app && sudo rm GitHub.zip
+#curl -o GitHub.zip https://d4hwcs1zqtwzs.cloudfront.net/mac/GitHub%20for%20Mac%20204.zip && unzip GitHub.zip && sudo mv GitHub.app /Applications/GitHub.app && sudo rm GitHub.zip
 
 # GitX
 curl -O http://builds.phere.net/GitX/development/GitX-dev.dmg && hdiutil attach GitX-dev.dmg && cp -R /Volumes/GitX\ 1964/GitX.app /Applications/ && hdiutil detach /Volumes/GitX\ 1964 && rm GitX-dev.dmg
@@ -140,13 +140,13 @@ curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg && hdiutil
 curl -O https://dl.google.com/drive/installgoogledrive.dmg && hdiutil attach installgoogledrive.dmg && cp -R /Volumes/Install\ Google\ Drive/Google\ Drive.app /Applications/ && hdiutil detach /Volumes/Install\ Google\ Drive && rm installgoogledrive.dmg
 
 # Java
-curl -o $TOINSTALLDIR/Java.dmg "http://sdlc-esd.sun.com/ESD6/JSCDL/jdk/8u40-b27/jre-8u40-macosx-x64.dmg?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u40-b27/jre-8u40-macosx-x64.dmg&BHost=javadl.sun.com&File=jre-8u40-macosx-x64.dmg&AuthParam=1427647083_3d7ccc34c24dee4540c0a78972aeffcd&ext=.dmg"
+curl -o $TOINSTALLDIR/Java.dmg "http://sdlc-esd.oracle.com/ESD6/JSCDL/jdk/8u60-b27/jre-8u60-macosx-x64.dmg?GroupName=JSC&FilePath=/ESD6/JSCDL/jdk/8u60-b27/jre-8u60-macosx-x64.dmg&BHost=javadl.sun.com&File=jre-8u60-macosx-x64.dmg&AuthParam=1444707306_d136c1211293a9e04962d68ee5ebd921&ext=.dmg"
 
 # MacKeeper
-curl -o $TOINSTALLDIR/MacKeeper.pkg http://download.mackeeper.com/package.php?bundleId=29_2
+#curl -o $TOINSTALLDIR/MacKeeper.pkg http://download.mackeeper.com/package.php?bundleId=29_2
 
 # MySQL
-curl -o $TOINSTALLDIR/MySQL.dmg http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.23-osx10.9-x86_64.dmg
+curl -o $TOINSTALLDIR/MySQL.dmg http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.27-osx10.9-x86_64.dmg
 
 # AutoStarting MySQL on Reboot
 MYSQLAUTOSTART="<!--?xml version="1.0" encoding="UTF-8"?-->
@@ -171,19 +171,19 @@ sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysql.plist
 
 
 #PhoneExpander
-curl -o PhoneExpander.zip http://phoneexpander.com/beta/PhoneExpander-public-beta3.zip && unzip PhoneExpander.zip && sudo mv PhoneExpander.app /Applications/PhoneExpander.app && sudo rm PhoneExpander.zip
+#curl -o PhoneExpander.zip http://phoneexpander.com/beta/PhoneExpander-public-beta3.zip && unzip PhoneExpander.zip && sudo mv PhoneExpander.app /Applications/PhoneExpander.app && sudo rm PhoneExpander.zip
 
 # Sequel Pro
-curl -O https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg && hdiutil attach sequel-pro-1.0.2.dmg && cp -R /Volumes/Sequel\ Pro\ 1.0.2/Sequel\ Pro.app /Applications/ && hdiutil detach /Volumes/Sequel\ Pro\ 1.0.2 && rm sequel-pro-1.0.2.dmg
+curl -O https://github.com/sequelpro/sequelpro/releases/download/release-1.1/sequel-pro-1.1.dmg && hdiutil attach sequel-pro-1.1.dmg && cp -R /Volumes/Sequel\ Pro\ 1.1/Sequel\ Pro.app /Applications/ && hdiutil detach /Volumes/Sequel\ Pro\ 1.1 && rm sequel-pro-1.1.dmg
 
 # Skype
-curl -O http://download.skype.com/macosx/c868eb3553d80de6e967b8a258e58009/Skype_7.6.409.dmg && hdiutil attach Skype_7.6.409.dmg && cp -R /Volumes/Skype/Skype.app /Applications/ && hdiutil detach /Volumes/Skype && rm Skype_7.6.409.dmg
+curl -O http://download.skype.com/macosx/f599b222161855aea46c76e8837c25df/Skype_7.13.428.dmg && hdiutil attach Skype_7.6.409.dmg && cp -R /Volumes/Skype/Skype.app /Applications/ && hdiutil detach /Volumes/Skype && rm Skype_7.13.428.dmg
 
 # Transmission
 curl -O https://transmission.cachefly.net/Transmission-2.84.dmg && hdiutil attach Transmission-2.84.dmg && cp -R /Volumes/Transmission/Transmission.app /Applications/ && hdiutil detach /Volumes/Transmission && rm Transmission-2.84.dmg
 
 # VLC
-curl -O http://mirror.csclub.uwaterloo.ca/vlc/vlc/2.2.0/macosx/vlc-2.2.0.dmg && hdiutil attach vlc-2.2.0.dmg && cp -R /Volumes/vlc-2.2.0/VLC.app /Applications/ && hdiutil detach /Volumes/vlc-2.2.0 && rm vlc-2.2.0.dmg
+curl -O http://mirror.csclub.uwaterloo.ca/vlc/vlc/2.2.1/macosx/vlc-2.2.1.dmg && hdiutil attach vlc-2.2.1.dmg && cp -R /Volumes/vlc-2.2.1/VLC.app /Applications/ && hdiutil detach /Volumes/vlc-2.2.1 && rm vlc-2.2.1.dmg
 
 ###############################################################################
 # Misc                                                                        #
